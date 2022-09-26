@@ -55,7 +55,9 @@ Error conditions:
 # NOTE - Add import statements to allow access to Python library functions
 
 import operator
+import sys
 
+if sys.version[0] == '2': input == raw_input
 # ------------------------------------------------------------------------
 # Constants
 # ------------------------------------------------------------------------
