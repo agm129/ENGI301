@@ -1,6 +1,6 @@
 """
 --------------------------------------------------------------------------
-Blink User3 LED 
+Blinking USR3 LED 
 --------------------------------------------------------------------------
 License:   
 Copyright 2022 - Ariadna Gomez
@@ -30,6 +30,14 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 THE POSSIBILITY OF SUCH DAMAGE.
+
+--------------------------------------------------------------------------
+This program uses the Adafruit_BBIO library to blink the USR3 LED light
+at a rate specified using the "delay" variable. 
+
+The specified delay of 0.10 will make it so that the USR3 LED light
+blinks at 5Hz (5 full on/off cycles per second). 
+
 --------------------------------------------------------------------------
 """
 
