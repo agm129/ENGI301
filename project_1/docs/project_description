@@ -33,8 +33,11 @@ $ cd opencv-3.4.1
 $ mkdir build && cd build
 $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D WITH_TBB=OFF -D BUILD_TBB=OFF -D WITH_V4L=ON -D WITH_LIBV4L=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF ..
 
-However, since we will not be using a USB camera for now, we will only install 3 libraries to be able to run this code. Run the following commands:
+However, since we will not be using a USB camera for now, we will only install 2 libraries to be able to run this code. Run the following commands:
 pip install opencv-python
 pip install numpy
-pip install matplotlib
+
+The only inputs this system needs at the moment is the push of a button to initialize the picture taking and disinfection abilities of the system. After
+the button has been pressed, the program will continue to run until the number of cultures is below the threshold number, in which case the LEDs will
+turn off and the system will go back to waiting for another button press. 
 
