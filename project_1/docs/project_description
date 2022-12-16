@@ -1,1 +1,15 @@
+This code was developed as part of a project for ENGI 301. 
+
+In this project, the goal was to develop a software model that would interface with a hardware model to successfully create a blue light disinfection 
+system that would run by itself once the PocketBeagle booted up. 
+
+The script is first meant to initialize the Hex Display and then wait for a button press. The moment that the button is pressed, a sequence of events will
+ensue, all while the system records the time that the button was pressed. After the button is pressed, the camera connected to the PB will take a picture 
+of an agar plate contaminated with bacteria and the system will compute the number of bacterial cultures present using openCV software. After the picture
+is taken, the blue LEDs will be turned on and a 30 minute countdown will begin. Every so often, the display will update with the time left on the 
+disinfection cycle and the system will once again take a picture of the contaminated agar plate and compute the number of bacterial cultures present 
+using openCV. If the number of cultures calculated by the system is less than the threshold value, then the LEDs will be turned off and the Hex display 
+will display "GOOD," and wait for a button press once again. If the number of cultures is above the threshold value, then the system will continue counting 
+down and updating the display until the number of cultures is below the threshold value. 
+
 
