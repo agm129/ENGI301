@@ -12,4 +12,24 @@ using openCV. If the number of cultures calculated by the system is less than th
 will display "GOOD," and wait for a button press once again. If the number of cultures is above the threshold value, then the system will continue counting 
 down and updating the display until the number of cultures is below the threshold value. 
 
+In preparation for running or modifying code:
+
+OpenCV requires certain dependencies to work with USB cameras. 
+These must be installed prior to OpenCV software installation:
+# libav video input/output development libraries
+$ sudo apt-get install libavformat-dev libavutil-dev libswscale-dev
+# Video4Linux camera development libraries
+$ sudo apt-get install libv4l-dev
+# OpenGL development libraries (to allow creating graphical windows)
+$ sudo apt-get install libglew-dev
+# GTK development libraries (to allow creating graphical windows)
+$ sudo apt-get install libgtk2.0-dev
+# Install the OpenCV python
+$ sudo apt-get install python-opencv
+
+Next, you must install the OpenCV software as follows: 
+$ unzip opencv-3.4.1.zip
+$ cd opencv-3.4.1
+$ mkdir build && cd build
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE -D WITH_TBB=OFF -D BUILD_TBB=OFF -D WITH_V4L=ON -D WITH_LIBV4L=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF ..
 
